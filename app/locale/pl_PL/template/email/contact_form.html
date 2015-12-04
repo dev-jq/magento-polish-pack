@@ -1,0 +1,24 @@
+<!--@subject Formularz kontaktowy @-->
+<!--@vars
+{"var data.name":"Sender Name",
+"var data.email":"Sender Email",
+"var data.telephone":"Sender Telephone",
+"var data.comment":"Comment"}
+@-->
+{* Style dodawane do {{var non_inline_styles}} jako wewnętrzny arkusz stylów *}
+<!--@styles
+@-->
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+	<h1>
+		Formularz kontaktowy
+	</h1>
+	<p>
+		Imię i Nazwisko: {{var data.name}}<br/>
+		E-mail: {{var data.email}}<br/>
+		Telefon: {{var data.telephone}}
+	</p>
+	<p>
+		Komentarz: {{var data.comment}}
+	</p>
+{{template config_path="design/email/footer"}}

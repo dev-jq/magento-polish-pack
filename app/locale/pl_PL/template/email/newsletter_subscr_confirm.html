@@ -1,0 +1,20 @@
+<!--@subject Potwierdzenie subskrybcji newslettera @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"skin url=\"images/logo_email.gif\" _area='frontend'":"Email Logo Image",
+"htmlescape var=$customer.name":"Customer Name",
+"var subscriber.getConfirmationLink()":"Subscriber Confirmation Url"}
+@-->
+{* Style dodawane do {{var non_inline_styles}} jako wewnętrzny arkusz stylów *}
+<!--@styles
+@-->
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+	<h1>
+		Dziękujemy za subskrybowanie Naszego newslettera.
+	</h1>
+	<p>
+		Aby zacząć go otrzymywać, musisz potwierdzić subskrypcję klikając w łącze:<br />
+		<a href="{{var subscriber.getConfirmationLink()}}">{{var subscriber.getConfirmationLink()}}</a>
+	</p>
+{{template config_path="design/email/footer"}}

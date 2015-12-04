@@ -1,0 +1,16 @@
+<!--@subject Ostrzerzenia podczas generowania mapy strony @-->
+<!--@vars
+{"var warnings":"Sitemap Generate Warnings"}
+@-->
+{* Style dodawane do {{var non_inline_styles}} jako wewnętrzny arkusz stylów *}
+<!--@styles
+@-->
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+	<h1>
+		Ostrzerzenia podczas generowania mapy strony:
+	</h1>
+	<p>
+		{{var warnings}}
+	</p>
+{{template config_path="design/email/footer"}}

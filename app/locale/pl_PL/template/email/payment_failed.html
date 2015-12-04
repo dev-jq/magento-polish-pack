@@ -1,0 +1,113 @@
+<!--@subject Zapłata za transakcję zakończona niepowodzeniem @-->
+<!--@vars
+{"var reason":"Transaction Failed Reason",
+"var checkoutType":"Checkout Type",
+"var customerEmail":"Customer Email",
+"var customer":"Customer Name",
+"var items":"Shopping Cart Items",
+"var total":"Total",
+"var billingAddress.format('html')":"Billing Address",
+"var shippingAddress.format('html')":"Shipping Address",
+"var shippingMethod":"Shipping Method",
+"var paymentMethod":"Payment Method",
+"var dateAndTime":"Date and Time of Transaction"}
+@-->
+{* Style dodawane do {{var non_inline_styles}} jako wewnętrzny arkusz stylów *}
+<!--@styles
+@-->
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+    <table cellspacing="0" cellpadding="0" border="0">
+        <thead>
+            <tr>
+                <th>
+                    <h1>
+                        Zapłata za transakcję zakończona niepowodzeniem
+                    </h1>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p>
+                        <b>Powód:</b><br />
+                        {{var reason}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <b>Typ płatności:</b><br />
+                        {{var checkoutType}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <b>Klient:</b><br />
+                        <a href="mailto:{{var customerEmail}}">{{var customer}}</a> &lt;{{var customerEmail}}&gt;
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <b>Produkty:</b><br />
+                        {{var items}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <b>Razem:</b><br />
+                        {{var total}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <b>Dane płatności:</b><br />
+                        {{var billingAddress.format('html')}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <b>Adres dostawy:</b><br />
+                        {{var shippingAddress.format('html')}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <b>Sposób dostawy:</b><br />
+                        {{var shippingMethod}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <b>Sposób zapłaty:</b><br />
+                        {{var paymentMethod}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <b>Data i czas:</b><br />
+                        {{var dateAndTime}}
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{{template config_path="design/email/footer"}}

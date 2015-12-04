@@ -1,0 +1,16 @@
+<!--@subject {{var subject}} @-->
+{* Style dodawane do {{var non_inline_styles}} jako wewnętrzny arkusz stylów *}
+<!--@styles
+@-->
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+	<h1>
+		Magento
+	</h1>
+	<p>
+		Moneybookers Adres Email: {{var email_addr}}<br>
+		Moneybookers ID klienta: {{var customer_id}}<br>
+		URL: {{var url}}<br>
+		Język: {{var language}}<br>
+	</p>
+{{template config_path="design/email/footer"}}
