@@ -1406,6 +1406,13 @@
 "REST - OAuth Consumers", "REST - Klienci OAuth"
 "REST - OAuth Authorized Tokens", "REST - Tokeny autoryzacji OAuth"
 "REST - My apps", "REST - Moje aplikacje"
+"Configurable Swatches", "Próbki konfigurowalne"
+"Product Attributes to Show as Swatches in Product Detail", "Cechy produktu wyświetlane jako próbki w szczegółach produktu"
+"Product Attribute to Use for Swatches in Product Listing", "Cechy produktu używane jako próbki w widoku listy produktów"
+"Swatch Dimensions on Product Detail Page", "Wymiary próbek na stronie produktu"
+"Innermost dimensions, not including border, in pixels", "Wymiary wewnętrzne, niezawierające obramowania, w pikselach"
+"Swatch Dimensions in Product Listing", "Wymiary próbek na liście produktów"
+"Swatch Dimensions in Layered Navigation", "Wymiary próbek w nawigacji warstwowej"
 
 
 
